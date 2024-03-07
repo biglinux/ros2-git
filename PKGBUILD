@@ -15,19 +15,11 @@ pkgdesc="A set of software libraries and tools for building robot applications (
 url="https://docs.ros.org/en/rolling/"
 arch=('any')
 license=('Apache')
-makedepends=('git' 'lttng-ust' 'lttng-tools')
-depends=(
-    'ros2-arch-deps'
-    'assimp'
-    'gmock'
-)
+makedepends=('git' 'lttng-ust' 'lttng-tools' 'qt6-tools')
+depends=('ros2-arch-deps' 'assimp' 'gmock' 'qt6-base')
 provides=(ros2)
-source=(
-    "ros2::git+https://github.com/ros2/ros2#branch=master"
-)
-sha256sums=(
-    'SKIP'
-)
+source=("ros2::git+https://github.com/ros2/ros2#branch=master")
+sha256sums=('SKIP')
 install=ros2-git.install
 
 pkgver() {
